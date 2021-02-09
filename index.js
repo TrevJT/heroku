@@ -1,5 +1,3 @@
-//testong
-
 var app = require('express')();
 var express = require('express');
 var path = require('path');
@@ -15,6 +13,7 @@ app.get('/layouts/', function(req, res) {
   res.render('view');
 });
 
+
 // Add Authentication Route file with app
 app.use('/', Authrouter);
 
@@ -27,6 +26,6 @@ app.use(expressLayouts);
 // Add Route file with app
 app.use('/', router);
 
-http.listen(5000, function(){
+http.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:5000');
 });
