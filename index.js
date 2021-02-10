@@ -21,7 +21,23 @@ client.connect();
 
 app.get('/addUser', (req, res) => {
     const query = "CREATE TABLE users (email varchar,firstName varchar,lastName varchar,age int)"
-  //  const query2 = "INSERT INTO users VALUES('rexrig@gmail.com', 'Rex', 'Righetti', 35)"
+//    const query2 = "INSERT INTO users VALUES('rexrig@gmail.com', 'Rex', 'Righetti', 35)"
+
+    client.query(query, (err, res) => {
+      if (err) throw err;
+      for (let row of res.rows) {
+        console.log(JSON.stringify(row));
+      }
+      client.end();
+    });
+   client.query(query2, (err, res) => {
+    if (err) throw err;
+    for (let row of res.rows) {
+      console.log(JSON.stringify(row));
+    }
+    client.end();
+  });
+ });
 
 
 client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
