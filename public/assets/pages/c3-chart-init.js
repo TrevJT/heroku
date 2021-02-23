@@ -10,7 +10,7 @@
     var ChartC3 = function() {};
 
     ChartC3.prototype.init = function () {
-        //generating chart 
+        //generating chart
         c3.generate({
             bindto: '#chart',
             data: {
@@ -77,28 +77,22 @@
             bindto: '#combine-chart',
             data: {
                 columns: [
-                    ['SonyVaio', 30, 20, 50, 40, 60, 50],
-                    ['iMacs', 200, 130, 90, 240, 130, 220],
-                    ['Tablets', 300, 200, 160, 400, 250, 250],
-                    ['iPhones', 200, 130, 90, 240, 130, 220],
-                    ['Macbooks', 130, 120, 150, 140, 160, 150]
+                    ['Sent', 200, 130, 90, 240, 130, 220],
+                    ['Opened', 95, 660, 50, 140, 60, 150],
+                    ['Clicked', 13, 12, 15, 14, 16, 15]
                 ],
                 types: {
-                    SonyVaio: 'bar',
-                    iMacs: 'bar',
-                    Tablets: 'spline',
-                    iPhones: 'line',
-                    Macbooks: 'bar'
+                    Sent: 'bar',
+                    Opened: 'bar',
+                    Clicked: 'bar'
                 },
                 colors: {
-                    SonyVaio: '#67a8e4',
-                    iMacs: '#4ac18e',
-                    Tablets: '#3bc3e9',
-                    iPhones: '#ffbb44',
-                    Macbooks: '#ea553d'
+                    Sent: '#67a8e4',
+                    Opened: '#4ac18e',
+                    Clicked: '#ea553d'
                 },
                 groups: [
-                    ['SonyVaio','iMacs']
+                    ['Sent','Opened','Clicked']
                 ]
             },
             axis: {
@@ -107,7 +101,7 @@
                 }
             }
         });
-        
+
         //Donut Chart
         c3.generate({
              bindto: '#donut-chart',
@@ -123,7 +117,7 @@
             donut: {
                 title: "Candidates",
                 width: 30,
-				label: { 
+				label: {
 					show:false
 				}
             },
@@ -131,7 +125,7 @@
             	pattern: ["#f06292", "#6d60b0","#5468da","#009688"]
             }
         });
-        
+
         //Pie Chart
         c3.generate({
              bindto: '#pie-chart',
@@ -159,11 +153,8 @@
 
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
     "use strict";
     $.ChartC3.init()
 }(window.jQuery);
-
-
-
