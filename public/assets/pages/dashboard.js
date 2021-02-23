@@ -30,6 +30,11 @@
                     ['Tablets', 300, 200, 160, 400, 250, 250],
                     ['iPhones', 200, 130, 90, 240, 130, 220],
                     ['Macbooks', 130, 120, 150, 140, 160, 150],
+                    ['gav1', 30, 20, 50, 40, 60, 50],
+                    ['iMacs1', 200, 130, 90, 240, 130, 220],
+                    ['Tablets1', 300, 200, 160, 400, 250, 250],
+                    ['iPhones1', 200, 130, 90, 240, 130, 220],
+                    ['Macbooks1', 130, 120, 150, 140, 160, 150]
 
                 ],
                 types: {
@@ -37,14 +42,24 @@
                     iMacs: 'bar',
                     Tablets: 'spline',
                     iPhones: 'line',
-                    Macbooks: 'bar'
+                    Macbooks: 'bar',
+                    gav1: 'bar',
+                    iMacs1: 'bar',
+                    Tablets1: 'spline',
+                    iPhones1: 'line',
+                    Macbooks1: 'bar'
                 },
                 colors: {
                     gav: '#5468da',
                     iMacs: '#4ac18e',
                     Tablets: '#ffbb44',
                     iPhones: '#ea553d',
-                    Macbooks: '#6d60b0'
+                    Macbooks: '#6d60b0',
+                    gav1: '#5468da',
+                    iMacs1: '#4ac18e',
+                    Tablets1: '#ffbb44',
+                    iPhones1: '#ea553d',
+                    Macbooks1: '#6d60b0'
                 },
                 groups: [
                     ['SonyVaio','iMacs']
