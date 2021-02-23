@@ -28,8 +28,8 @@
             bindto: '#donut-chart',
             data: {
                 columns: [
-                    ['Desktops', 78],
-                    ['Mobiles', 40],
+                    ['SMS', 78],
+                    ['Email', 40],
                     ['Tablets', 25]
                 ],
                 type : 'donut'
