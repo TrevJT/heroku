@@ -27,26 +27,18 @@
                 columns: [
                     ['gav', 30, 20, 50, 40, 60, 50],
                     ['iMacs', 200, 130, 90, 240, 130, 220],
-                    ['Tablets', 300, 200, 160, 400, 250, 250],
-                    ['iPhones', 200, 130, 90, 240, 130, 220],
                     ['Macbooks', 130, 120, 150, 140, 160, 150],
                     ['gav1', 30, 20, 50, 40, 60, 50],
                     ['iMacs1', 200, 130, 90, 240, 130, 220],
-                    ['Tablets1', 300, 200, 160, 400, 250, 250],
-                    ['iPhones1', 200, 130, 90, 240, 130, 220],
                     ['Macbooks1', 130, 120, 150, 140, 160, 150]
 
                 ],
                 types: {
                     gav: 'bar',
                     iMacs: 'bar',
-                    Tablets: 'spline',
-                    iPhones: 'line',
                     Macbooks: 'bar',
                     gav1: 'bar',
                     iMacs1: 'bar',
-                    Tablets1: 'spline',
-                    iPhones1: 'line',
                     Macbooks1: 'bar'
                 },
                 colors: {
