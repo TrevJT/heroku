@@ -10,43 +10,43 @@ var Authrouter = require('./Authrouter.js');
 
 const { Client } = require('pg');
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+//const client = new Client({
+//  connectionString: process.env.DATABASE_URL,
+//  ssl: {
+//    rejectUnauthorized: false
+//  }
+//});
 
-client.connect();
-
-
-app.get('/addUser', (req, res) => {
-    const query2 = "INSERT INTO referer VALUES('Gav', 'Marsh', 'trevorchico@gmail.com', 8053901269)"
-
-    client.query(query, (err, res) => {
-      if (err) throw err;
-      for (let row of res.rows) {
-        console.log(JSON.stringify(row));
-      }
-      client.end();
-    });
-   client.query(query2, (err, res) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-    }
-    client.end();
-  });
- });
+//client.connect();
 
 
-client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-});
+// app.get('/addUser', (req, res) => {
+//     const query2 = "INSERT INTO referer VALUES('Gav', 'Marsh', 'trevorchico@gmail.com', 8053901269)"
+//
+//     client.query(query, (err, res) => {
+//       if (err) throw err;
+//       for (let row of res.rows) {
+//         console.log(JSON.stringify(row));
+//       }
+//       client.end();
+//     });
+//    client.query(query2, (err, res) => {
+//     if (err) throw err;
+//     for (let row of res.rows) {
+//       console.log(JSON.stringify(row));
+//     }
+//     client.end();
+//   });
+//  });
+//
+//
+// client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+//   if (err) throw err;
+//   for (let row of res.rows) {
+//     console.log(JSON.stringify(row));
+//   }
+//   client.end();
+// });
 
 // Access public folder from root
 app.use('/public', express.static('public'));
@@ -67,6 +67,6 @@ app.use(expressLayouts);
 // Add Route file with app
 app.use('/', router);
 
-http.listen(process.env.PORT || 5000, function(){
+app.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:5000');
 });

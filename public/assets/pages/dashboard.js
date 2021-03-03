@@ -25,18 +25,15 @@
             bindto: '#combine-chart',
             data: {
                 columns: [
-                    ['gav', 30, 20, 50, 40, 60, 50],
-                    ['iMacs', 200, 130, 90, 240, 130, 220],
-                    ['Macbooks', 130, 120, 150, 140, 160, 150],
-                    ['gav1', 30, 20, 50, 40, 60, 50],
-                    ['iMacs1', 200, 130, 90, 240, 130, 220],
-                    ['Macbooks1', 130, 120, 150, 140, 160, 150]
+                    ['Email_Opened', 530, 420, 550, 540, 560, 550],
+                    ['Friend_Opt_In', 200, 130, 90, 240, 130, 220],
+                    ['Accounts_Opened', 30, 20, 50, 40, 60, 50],
 
                 ],
                 types: {
-                    gav: 'bar',
-                    iMacs: 'bar',
-                    Macbooks: 'bar',
+                    Email_Opened: 'bar',
+                    Friend_Opt_In: 'bar',
+                    Accounts_Opened: 'bar',
                     gav1: 'bar',
                     iMacs1: 'bar',
                     Macbooks1: 'bar'
