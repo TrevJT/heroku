@@ -25,6 +25,8 @@ client.connect(err => {
   }
 })
 
+let x = {};
+
 const query = `
 SELECT *
 FROM referer
@@ -37,9 +39,16 @@ client.query(query, (err, res) => {
     }
     for (let row of res.rows) {
         console.log(row);
+        return row.email;
     }
     client.end();
 });
+
+
+app.get('/contacts', function (req, res) {
+    res.render('Tables/contacts',query);
+res.send("hello");
+})
 
 // client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
 //   if (err) throw err;
