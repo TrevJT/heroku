@@ -25,6 +25,22 @@ client.connect(err => {
   }
 })
 
+const query = `
+SELECT *
+FROM referer
+`;
+
+client.query(query, (err, res) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    for (let row of res.rows) {
+        console.log(row);
+    }
+    client.end();
+});
+
 // client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
 //   if (err) throw err;
 //   for (let row of res.rows) {
