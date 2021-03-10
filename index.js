@@ -26,23 +26,23 @@ client.connect(err => {
 })
 
 let x = {};
-//
-// const query = `
-// SELECT *
-// FROM referer
-// `;
-//
-// client.query(query, (err, res) => {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-//     for (let row of res.rows) {
-//         console.log(row);
-//         return row.email;
-//     }
-//     client.end();
-// });
+
+const query = `
+SELECT *
+FROM referer
+`;
+
+client.query(query, (err, res) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    for (let row of res.rows) {
+        console.log(row);
+        return row.email;
+    }
+    client.end();
+});
 
 //throwing error so commenting out
 // let test={'name': 'bob'}
