@@ -44,60 +44,13 @@ let x = {};
 //     client.end();
 // });
 
-let test={'name': 'bob'}
-app.get('/contacts', function (req, res) {
-    res.render('Tables/contacts',{test});
-})
+//throwing error so commenting out
+// let test={'name': 'bob'}
+// app.get('/contacts', function (req, res) {
+//     res.render('Tables/contacts',{test});
+// })
 
 
-
-// client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-//   if (err) throw err;
-//   for (let row of res.rows) {
-//     console.log(JSON.stringify(row));
-//   }
-//   client.end();
-// });
-
-//const client = new Client({
-//  connectionString: process.env.DATABASE_URL,
-//  ssl: {
-//    rejectUnauthorized: false
-//  }
-//});
-
-//client.connect();
-
-
-// app.get('/addUser', (req, res) => {
-//     const query2 = "INSERT INTO referer VALUES('Gav', 'Marsh', 'trevorchico@gmail.com', 8053901269)"
-//
-//     client.query(query, (err, res) => {
-//       if (err) throw err;
-//       for (let row of res.rows) {
-//         console.log(JSON.stringify(row));
-//       }
-//       client.end();
-//     });
-//    client.query(query2, (err, res) => {
-//     if (err) throw err;
-//     for (let row of res.rows) {
-//       console.log(JSON.stringify(row));
-//     }
-//     client.end();
-//   });
-//  });
-//
-//
-// client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-//   if (err) throw err;
-//   for (let row of res.rows) {
-//     console.log(JSON.stringify(row));
-//   }
-//   client.end();
-// });
-
-// Access public folder from root
 app.use('/public', express.static('public'));
 app.get('/layouts/', function(req, res) {
   res.render('view');

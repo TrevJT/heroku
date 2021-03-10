@@ -15,6 +15,9 @@ router.get('/dashboard2', function (req, res) {
 router.get('/single-upload', function (req, res) {
     res.render('Forms/single-upload');
 })
+// router.post('/',(req,res) =>{
+//   req.body.email INSERT
+// }
 
 router.get('/contacts', function (req, res) {
     res.render('Tables/contacts');
