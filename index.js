@@ -32,19 +32,7 @@ SELECT *
 FROM referer
 `;
 
-client.query(query, (err, res) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(res);
-    // // for (let row of res.rows) {
-    //   console.log('fuck');
-    //     console.log(row);
-    //     return row.email;
-    // }
-    client.end();
-});
+
 
 //throwing error so commenting out
  // let test={'name': 'bob'}
@@ -70,6 +58,20 @@ app.use(expressLayouts);
 
 // Add Route file with app
 app.use('/', router);
+
+app.get('/contacts', function (req, res) {
+  client.query(query, (err, data) => {
+      if (err) {
+          console.error(err);
+          return;
+      }
+      console.log(data);
+res.render('Tables/contacts',{data});
+
+      client.end();
+  });
+
+})
 
 app.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:5000');

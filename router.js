@@ -19,9 +19,7 @@ router.get('/single-upload', function (req, res) {
 //   req.body.email INSERT
 // }
 
-router.get('/contacts', function (req, res) {
-    res.render('Tables/contacts');
-})
+
 
 // Calendar
 router.get('/calendar', function (req, res) {
