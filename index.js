@@ -38,6 +38,7 @@ client.query(query, (err, res) => {
         return;
     }
     for (let row of res.rows) {
+      console.log('fuck');
         console.log(row);
         return row.email;
     }
@@ -45,10 +46,10 @@ client.query(query, (err, res) => {
 });
 
 //throwing error so commenting out
-// let test={'name': 'bob'}
-// app.get('/contacts', function (req, res) {
-//     res.render('Tables/contacts',{test});
-// })
+ // let test={'name': 'bob'}
+ // app.get('/contacts', function (req, res) {
+ //     res.render('Tables/contacts',{test});
+ // })
 
 
 app.use('/public', express.static('public'));
