@@ -2,8 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 // Dashboard
+const test = {
+  'name':'rexxx'
+}
 router.get('/', function (req, res) {
-   res.render('Dashboard/dashboard1');
+   res.render('Dashboard/dashboard1',{test});
 })
 router.get('/dashboard2', function (req, res) {
     res.render('Dashboard/dashboard2');
