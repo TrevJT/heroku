@@ -66,7 +66,8 @@ app.get('/contacts', function (req, res) {
           return;
       }
       console.log(data);
-res.render('Tables/contacts',{data.rows});
+      // data=data.rows;
+res.render('Tables/contacts',{data});
 
       client.end();
   });
