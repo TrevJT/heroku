@@ -40,6 +40,7 @@ client.query(query, (err, res) => {
     for (let row of res.rows) {
       console.log('fuck');
         console.log(row);
+        res.render('Tables/contacts',{res});
         return row.email;
     }
     client.end();
