@@ -15,12 +15,7 @@
                     <li class="breadcrumb-item active">Datatable</li>
                 </ol>
             </div>
-            <h4 class="page-title"><%=data.rows[0].email %></h4>
-            <ul>
-          <%# <% data.rows.forEach(function(value) { %>
-                <li><%= value.email %></li>
-                <% }) %>
-              </ul> %>
+
 
         </div>
     </div>
@@ -514,6 +509,14 @@
                         </div>
                     </div> <!-- end col -->
                 </div> <!-- end row -->
+
+                <h4 class="page-title"><%=data.rows[0].email %></h4>
+                <ul>
+
+              <% data.rows.forEach(function(value) { %>
+                    <li><%= value.email %></li>
+                    <% }) %>
+                  </ul>
 
 <%- contentFor('FooterJs') %>
 <!-- Required datatable js -->
